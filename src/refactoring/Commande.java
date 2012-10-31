@@ -10,4 +10,8 @@ public class Commande {
         this.montant = montant;
         this.date = date;
     }
+
+    public boolean estDansIntervalle(Intervalle intervalle){
+        return intervalle.estPresent(date);
+    }
 }
