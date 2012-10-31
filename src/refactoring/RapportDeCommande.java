@@ -12,17 +12,17 @@ public class RapportDeCommande {
         this.commandes = commandes;
     }
 
-    public int totalDesVentesDansLIntervalDeTemps(){
+    public int totalDesVentesDansIntervalleDeTemps(){
         int somme = 0;
-        ArrayList<Commande> commandesDansLIntervalDeTemps = new ArrayList<Commande>();
+        ArrayList<Commande> commandesDansIntervalleDeTemps = new ArrayList<Commande>();
 
         for(Commande commande : commandes){
             if(commande.date >= date_debut && commande.date <= date_fin){
-                commandesDansLIntervalDeTemps.add(commande);
+                commandesDansIntervalleDeTemps.add(commande);
             }
         }
 
-        for(Commande commande : commandesDansLIntervalDeTemps){
+        for(Commande commande : commandesDansIntervalleDeTemps){
             somme += commande.montant;
         }
         return somme;
